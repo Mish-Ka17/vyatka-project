@@ -24,24 +24,6 @@ copy .env.example .env  (создание файла конфигурации .e
 
 php artisan key:generate  (генерация ключа Laravel)
 
-настроить файл .env:
- 
- - APP_ENV=local
-
- - APP_DEBUG=true
-
- - APP_URL=https://vyatka-project
-
- - Подключение к БД выполнять необязательно, т.к тестовые данные находятся в самом коде 
-
-php artisan migrate (необязательно выполнение ввиду не использования БД )
-
-php artisan storage:link  (создание символичекой ссылки, необязательно для тестового режима )
-
-#### Сборка development
-
-npm run dev  (сборка frontend в режиме разработки)
-
 #### Сборка production
 
 npm run build  (сборка frontend для production)
