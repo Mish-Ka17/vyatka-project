@@ -16,23 +16,25 @@
 
 ## Установка модулей и настройка проекта
 
-composer install  (установка PHP-зависимостей)
+1. clone https://github.com/Mish-Ka17/vyatka-project.git ( клонирование проекта в .../OSPanel/home/ )
 
-npm install  (установка Node-пакетов)
+2. composer install  (установка PHP-зависимостей)
 
-copy .env.example .env  (создание файла конфигурации .env)
+3. npm install  (установка Node-пакетов)
 
-php artisan key:generate  (генерация ключа Laravel)
+4. copy .env.example .env  (создание файла конфигурации .env)
+
+5. php artisan key:generate  (генерация ключа Laravel)
 
 #### Сборка production
 
-npm run build  (сборка frontend для production)
+6. npm run build  (сборка frontend для production)
 
 ## Запуск проекта локально
 
 Проект разрабатан в среде Open Server 6
 
-## Возможности
+## Возможности - доступные страницы из главного меню:
 
 - Главная страница
 - Каталог товаров
