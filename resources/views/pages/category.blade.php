@@ -24,15 +24,12 @@
 
             <x-category.sort/>
 
-            <div
-                class="
-                    grid
+            <div class="grid
                     gap-6
-                    lg:grid-cols-3
-                "
+                    lg:grid-cols-3"
             >
 
-                @foreach($products as $product)
+            @foreach($products as $product)
 
                 <x-product.card
                     title="{{$product->title}}"
@@ -42,7 +39,7 @@
                     url="{{$product->url}}"
                 />
 
-                @endforeach
+            @endforeach
 
             </div>
 

@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function createMainPageData (Request $request, int $count=4) {
-        for($i=1; $i<=$count; $i++)
+    public function createMainPageData () {
+        for($i=1; $i<=4; $i++)
             {
             $category= new \stdClass();
             $category->title="Название категории {$i}";
@@ -37,7 +34,6 @@ class MainController extends Controller
             array_pop($news);
 
         return view('pages.home', compact('products', 'categories','news'));
-
     }
 
     public function createCatalogData () {
@@ -51,7 +47,6 @@ class MainController extends Controller
             $categories[]=$category;
             }
         return view('pages.catalog', compact('categories'));
-
     }
 
     public function createBlogData () {
@@ -67,7 +62,6 @@ class MainController extends Controller
             $news[]=$new;
             }
         return view('pages.blog', compact('news'));
-
     }
 
     public function createCategoryData () {
@@ -86,4 +80,19 @@ class MainController extends Controller
         return view('pages.category', compact('products'));
     }
 
+    public function createCategoryExtraData () {
+        for($i=1; $i<=4; $i++)
+            {
+            $product= new \stdClass();
+            $product->title="Название товара {$i}";
+            $product->price=1000+$i*100;
+            $product->oldPrice=1500+$i*15;
+            $product->image=null;
+            $product->url='/category/product';
+
+            $products[]=$product;
+            }
+
+        return view('pages.product', compact('products'));
+    }
 }

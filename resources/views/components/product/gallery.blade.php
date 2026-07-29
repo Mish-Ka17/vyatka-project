@@ -1,11 +1,8 @@
-<div
-    x-data="gallery()"
+<div x-data="gallery()"
     class="relative overflow-hidden rounded-3xl bg-zinc-100"
 >
-
     <div class="w-[774px] h-[580px]">
         <!-- aspect-4/3 -->
-
         {{-- изображение --}}
 
     </div>
