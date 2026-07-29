@@ -5,9 +5,9 @@
 @section('content')
     <x-hero></x-hero>
     {{-- Товары --}}
-    <x-sections.products/>
+    <x-sections.products :$products/>
     {{-- Каталог --}}
-    <x-sections.catalog/>
+    <x-sections.catalog :$categories/>
     {{-- Новости --}}
-    <x-sections.news/>
+    <x-sections.news :$news/>
 @endsection

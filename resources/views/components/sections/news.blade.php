@@ -1,28 +1,3 @@
-@php
-$news = [
-    [
-        'title' => 'Название новости 1',
-        'description' => 'Место под короткое описание. Очевидно, что эффективный
-                            диаметр астатически притягивает космический поперечник',
-        'image' => null,
-        'url' => '/blog/article',
-    ],
-    [
-        'title' => 'Название новости 6',
-        'description' => 'Место под короткое описание. Очевидно, что эффективный
-                            диаметр астатически притягивает космический поперечник',
-        'image' => null,
-        'url' => '/blog/article',
-    ],
-    [
-        'title' => 'Название новости 2',
-        'description' => 'Место под короткое описание. Очевидно, что эффективный
-                            диаметр астатически притягивает космический поперечник',
-        'image' => null,
-        'url' => '/blog/article',
-    ],
-]
-@endphp
 <section>
 
 <div class="container-page mt-4">
@@ -40,11 +15,11 @@ $news = [
         @foreach($news as $article)
 
             <x-news.card
-                :title="$article['title']"
-                :description="$article['description']"
-                :image="$article['image']"
-                :url="$article['url']"
-            />
+                title="{{$article->title}}"
+                description="{{$article->description}}"
+                image="{{$article->image}}"
+                url="{{$article->url}}"
+                />
 
         @endforeach
     </div>

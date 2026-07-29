@@ -14,6 +14,6 @@
         />
     </div>
 
-    <x-sections.catalog/>
+    <x-sections.catalog :$categories/>
 
 @endsection

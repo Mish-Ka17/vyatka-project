@@ -4,97 +4,6 @@
 
 @section('content')
 
-@php
-
-$products = [
-    [
-        'title' => 'Название товара 1',
-        'price' => 1000,
-        'oldPrice' => 1500,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 2',
-        'price' => 1500,
-        'oldPrice' => 1700,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 3',
-        'price' => 1800,
-        'oldPrice' => 2000,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 4',
-        'price' => 2500,
-        'oldPrice' => 3000,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 5',
-        'price' => 1000,
-        'oldPrice' => 1500,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 6',
-        'price' => 1500,
-        'oldPrice' => 1700,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 7',
-        'price' => 1800,
-        'oldPrice' => 2000,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 8',
-        'price' => 2500,
-        'oldPrice' => 3000,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 9',
-        'price' => 1000,
-        'oldPrice' => 1500,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 10',
-        'price' => 1500,
-        'oldPrice' => 1700,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 11',
-        'price' => 1800,
-        'oldPrice' => 2000,
-        'image' => null,
-        'url' => '/category/product',
-    ],
-    [
-        'title' => 'Название товара 12',
-        'price' => 2500,
-        'oldPrice' => 3000,
-        'image' => null,
-        'url' => '/category/product',
-    ]
-];
-
-@endphp
-
 <div class="container-page py-12">
 
     <x-ui.breadcrumbs
@@ -125,14 +34,13 @@ $products = [
 
                 @foreach($products as $product)
 
-                    <x-product.card
-                        :title="$product['title']"
-                        :price="$product['price']"
-                        :old-price="$product['oldPrice']"
-                        :image="$product['image']"
-                        :url="$product['url']"
-
-                    />
+                <x-product.card
+                    title="{{$product->title}}"
+                    price="{{$product->price}}"
+                    oldPrice="{{$product->oldPrice}}"
+                    image="{{$product->image}}"
+                    url="{{$product->url}}"
+                />
 
                 @endforeach
 

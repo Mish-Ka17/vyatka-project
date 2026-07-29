@@ -20,8 +20,6 @@
     </div>
 
 </section> -->
-
-
 <section class="py-8">
 
     <div class="container-page">
@@ -34,33 +32,13 @@
                 gap-4
                 md:grid-cols-2"
         >
-
-            <!-- <a href="/category"> -->
+            @foreach ($categories as $category)
                 <x-category.card
-                    title="Название"
-                    description="Описание категории 1"
-                    image="/images/category.jpg"
-                />
-            <!-- </a> -->
+                    title="{{$category->title}}"
+                    description="{{$category->description}}"
+                    image="{{$category->image}}"/>
 
-            <x-category.card
-                title="Название"
-                description="Описание категории 2"
-                image="/images/category.jpg"
-            />
-
-
-            <x-category.card
-                title="Название"
-                description="Описание категории 3"
-                image="/images/category.jpg"
-            />
-
-            <x-category.card
-                title="Название"
-                description="Описание категории 4"
-                image="/images/category.jpg"
-            />
+            @endforeach
 
         </div>
 
